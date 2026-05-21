@@ -8,6 +8,7 @@ Many regional airports in Sri Lanka — including **Ratmalana**, **Jaffna**, and
 This project presents a **low-cost, standalone AWOS** designed for regional aviation applications. The system provides real-time meteorological monitoring with integrated machine learning-based short-term wind forecasting — achieving performance comparable to commercial AWOS at a significantly reduced cost.
 
 > Field-tested at **Colombo International Airport, Ratmalana**, with validation against official meteorological department reference data and ATC tower instrumentation.
+<img width="134" height="296" alt="Picture8" src="https://github.com/user-attachments/assets/7f60c7b8-cee7-42b8-8c64-3dc9e67a9afe" />
 
 ---
 
@@ -62,6 +63,8 @@ The system is composed of two primary subsystems:
 | Custom PCBs | Designed for field sensing unit and central monitoring unit |
 | Nano Module + SD Card | Local data storage |
 | OLED Display | On-unit status display |
+<img width="236" height="269" alt="Picture9" src="https://github.com/user-attachments/assets/7cf8c9be-aecd-4055-940e-e7d2d8ba1b8c" />
+<img width="229" height="288" alt="Picture7" src="https://github.com/user-attachments/assets/3465dd7e-a250-4f21-9f64-9a2751e984c2" />
 
 ---
 
@@ -75,6 +78,8 @@ The system is composed of two primary subsystems:
 | ML Models | Python (Random Forest, SVR, scikit-learn) |
 | Data Export | XLSX (Excel-compatible) |
 | Training Data | Meteostat historical data + AWOS real-time observations (30-min intervals) |
+<img width="700" height="500" alt="1" src="https://github.com/user-attachments/assets/dab7b62c-2405-4f79-8ae0-f19362863e58" />
+<img width="700" height="350" alt="2" src="https://github.com/user-attachments/assets/c1df9067-77c3-4257-8ffd-d124bb664e2f" />
 
 ---
 
