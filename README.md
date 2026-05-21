@@ -78,7 +78,7 @@ The system is composed of two primary subsystems:
 | ML Models | Python (Random Forest, SVR, scikit-learn) |
 | Data Export | XLSX (Excel-compatible) |
 | Training Data | Meteostat historical data + AWOS real-time observations (30-min intervals) |
-<img width="700" height="500" alt="1" src="https://github.com/user-attachments/assets/dab7b62c-2405-4f79-8ae0-f19362863e58" />
+<img width="700" height="300" alt="1" src="https://github.com/user-attachments/assets/dab7b62c-2405-4f79-8ae0-f19362863e58" />
 <img width="700" height="350" alt="2" src="https://github.com/user-attachments/assets/c1df9067-77c3-4257-8ffd-d124bb664e2f" />
 
 ---
