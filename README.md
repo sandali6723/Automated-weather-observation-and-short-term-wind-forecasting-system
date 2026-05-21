@@ -37,22 +37,13 @@ The system is composed of two primary subsystems:
 
 | Model | MAE (kt) | RMSE (kt) | Accuracy (%) |
 |---|---|---|---|
-| **Random Forest** ✅ | **1.135** | **1.568** | **85.35** |
-| FTDNN | 1.229 | 1.337 | 81.79 |
-| Gradient Boosting | 1.583 | 1.758 | 79.58 |
-| ANN | 1.664 | 1.804 | 78.53 |
-| AR (12) | 1.806 | 1.904 | 76.70 |
-| ARIMA (3,1,1) | 2.614 | 2.741 | 66.26 |
-| GEP | 7.250 | 7.297 | 6.45 |
+| **Random Forest**| **1.135** | **1.568** | **85.35** |
 
 ### Wind Direction Forecasting (±45° tolerance)
 
 | Model | Forecast Horizon | MAE (°) | RMSE (°) | Accuracy ±45° (%) |
 |---|---|---|---|---|
-| **SVR** ✅ | +120 min | **21.02** | **21.36** | **100.0** |
-| SVR | +60 min | 25.91 | 27.44 | 100.0 |
-| FFNN | +120 min | 33.75 | 33.96 | 100.0 |
-| FFNN | +60 min | 37.32 | 39.60 | 50.0 |
+| SVR | +120 min | **21.02** | **21.36** | **100.0** |
 
 > **Note:** Sine-cosine transformation is applied to wind direction data to handle the 0°/360° angular discontinuity during preprocessing.
 
@@ -80,7 +71,6 @@ The system is composed of two primary subsystems:
 |---|---|
 | Firmware | ESP32 (Arduino/C++), I²C, UART, RS485 |
 | Primary Dashboard | Flask (Python), Ethernet |
-| Redundant Web App | Next.js, Wi-Fi |
 | Database | Local database with 30-day FIFO buffer |
 | ML Models | Python (Random Forest, SVR, scikit-learn) |
 | Data Export | XLSX (Excel-compatible) |
@@ -96,32 +86,5 @@ The system is composed of two primary subsystems:
 - **Recommended safety margins:** ±10° for direction, ±1.5 kt for speed (high-precision decisions)
 - **Temperature, humidity, pressure, dew point:** Strong agreement with reference instruments
 - **Pressure calibration:** Systematic offset of one unit identified and documented
-
----
-
-## 📁 Repository Structure
-
-```
-awos/
-├── firmware/
-│   ├── field_unit/          # ESP32 firmware for transmitter (sensor acquisition, LoRa TX)
-│   └── central_unit/        # ESP32 firmware for receiver/gateway
-├── hardware/
-│   ├── pcb_transmitter/     # PCB design files for field sensing unit
-│   └── pcb_receiver/        # PCB design files for central monitoring unit
-├── software/
-│   ├── dashboard_flask/     # Flask-based primary web dashboard
-│   ├── dashboard_nextjs/    # Next.js redundant web application
-│   └── database/            # Database schema and management scripts
-├── ml_models/
-│   ├── wind_speed/          # Random Forest model training and inference
-│   ├── wind_direction/      # SVR model training and inference
-│   └── preprocessing/       # Data cleaning and sine-cosine transformations
-├── data/
-│   └── sample/              # Sample meteorological datasets
-├── docs/
-│   └── paper.pdf            # Published IEEE conference paper
-└── README.md
-```
 
 ---
