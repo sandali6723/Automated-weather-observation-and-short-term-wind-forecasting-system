@@ -6,6 +6,45 @@ The system is divided into two main PCB modules:
 - **Receiver Unit PCB**
 ---
 
+## 🌦️ Sensors & Modules Used
+
+### 📍 Environmental Sensors (Transmitter Side)
+- **BMP280** – Atmospheric pressure and temperature (barometric sensing)  
+- **Anemometer (RS485 based)** – Wind speed measurement  
+- **Wind Direction sensor (RS485 based)** – Wind direction measurement
+- **NEO 8MN GPS Module** – synchronize with UTC time  
+
+---
+
+### 📡 Communication Modules
+- **RS485 to TTL Converter** – Long-distance sensor communication interface  
+- **LoRa Module (SX1278 / compatible)** – Long-range wireless data transmission between transmitter and receiver  
+- **ESP32-WROOM-32** – Main wireless processing and IoT connectivity unit  
+- **UART / Serial Communication Interfaces** – Inter-module data exchange  
+
+---
+
+### ⚙️ Processing & Control Units
+- **ESP32-WROOM-32** – Primary receiver-side processing and network handling  
+- **Arduino Nano (Receiver Unit)** – Secondary control and data handling  
+- **Arduino Nano (SD Control / Interface handling)** – Storage management support  
+
+---
+
+### 💾 Storage & Display Modules
+- **SD Card Module** – Local data logging and backup storage  
+- **OLED Display (I2C, SSD1306)** – Real-time weather data visualization  
+- **Rotary Encoder Module** – Menu navigation and display control  
+
+---
+
+### ⚡ Power Management
+- **Buck Converter Modules (LM2596 / similar)**  
+  - 12V → 5V regulation  
+  - 12V → 3.3V regulation  
+- **Voltage Regulation Capacitors & Filtering Network** – Noise suppression and stability  
+
+---
 ## 🧩 Transmitter PCB Design
 
 The transmitter board is responsible for collecting sensor data and sending it via long-range communication.
